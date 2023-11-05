@@ -1,0 +1,131 @@
+/*
+* Header 
+* Шапка сайта
+*/
+
+.wrapper{
+    height: 120vh;
+    /*Высота, видная пользователю*/
+    min-width: 320px;
+    overflow-x: hidden;
+    
+}
+.navbar{
+    width: 100%;
+    height: 70px;
+    /*box-shadow - отвечает за тень. 
+    с параметрами: 
+    0- смещение по х, 
+    4рх- смещение по у,
+    10рх - размытость
+    rgba - цвет тени, в палитре rgb, последний параметр отвечает за размытие*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+.navbar-brand{
+    height: 50px;
+    width: 50px;
+    margin: 10px 0px 10px 40px;
+}
+.navbar .container{
+    height: inherit; /*высота зависит от родителя, то есть от navbar*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-menu{
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+   
+}
+.navbar-menu li{
+    display: inline-block;
+    /*padding: 0px, 10px;*/
+    margin-right: 10px;
+}
+.navbar-menu li a{
+    display: inline-block;
+    color: black;
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 0px, 10px;
+    transition: all .074s ease-in-out;
+}
+.navbar-menu li a:hover{
+    opacity: 1;
+}
+.navbar-wrap{
+    display: flex;
+    flex-flow:  row nowrap;
+    align-items: center;
+}
+.login{
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 10px;
+    background-color:rgb(255, 170, 30);
+    border-radius: 100px;
+    color: black;
+    transition: all .1s ease-in;
+}
+.login:hover{
+    transform: scale(1.1); 
+    box-shadow: 0 5px 10px rgba(255, 170, 30, .4);
+}
+
+/*
+* Main  valve
+* Главный экран
+*/
+
+.header{
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+.header-container{
+    min-height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+.header-content{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding-top: 40vh;
+    padding-left: 20vh;
+}
+.header-content h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+}
+.btn-main{
+    display: inline-block;
+    padding: 10px 35px;
+    font-size: 18px;
+    background-color: rgb(255, 170, 30);
+    color: black;
+   /* text-transform: uppercase; - для того что бы сделать текст БОЛЬШИМИ БУКВАМИ*/
+    border-radius: 5px;
+    font-weight: 200px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .14);
+    transition: all .09s ease-out;
+}
+.btn-main:hover{
+    box-shadow: 0 5px 10px rgba(255, 170, 30, .4);
+    transform: scale(1.05);
+
+}
